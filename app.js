@@ -46,11 +46,16 @@ function setColor(colorChoice){
 
 function colorDiv(){
   if(color == 'random'){
-    this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`
+    this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
   }
   else {
-    this.style.backgroundColor = "black"
+    this.style.backgroundColor = "black";
   }
+}
+
+function resetBoard(){
+  let divs = document.querySelectorAll('div');
+  divs.forEach((div) => div.style.backgroundColor = "white");
 }
 // function makeBlocks() {
 //   for (var i = 0; i < 16; i++) {
