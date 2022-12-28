@@ -1,3 +1,5 @@
+color = "black";
+
 document.addEventListener("DOMContentLoaded", function(){
   createBoard(16);
 
@@ -18,7 +20,7 @@ function createBoard(size){
 
   for (let i=0; i < numDivs; i++){
     let div = document.createElement("div");
-    div.style.backgroundColor = 'yellow';
+    div.addEventListener('mouseover', colorDiv)
     board.insertAdjacentElement('afterbegin', div);
   }
 }
@@ -38,6 +40,18 @@ function getSize(){
   }
 }
 
+function setColor(colorChoice){
+  color = colorChoice
+}
+
+function colorDiv(){
+  if(color == 'random'){
+    this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`
+  }
+  else {
+    this.style.backgroundColor = "black"
+  }
+}
 // function makeBlocks() {
 //   for (var i = 0; i < 16; i++) {
 //       var row = document.createElement('div');
