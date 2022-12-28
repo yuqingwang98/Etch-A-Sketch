@@ -4,21 +4,38 @@ h1, h2, p, div, header {
   font-family: 'Roboto';
 }
 
-header {
-  font-size: 20px;
+body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-footer {
-  background: coral;
-  bottom: 0;
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  text-align: center;
-  width: 100%;
+.header {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 500px;
 }
 
-/* grid */
+.footer {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 500px;
+}
+
+.board {
+  border: 1px solid black;
+  display: grid;
+  height: 500px;
+  width: 500px;
+}
+/* grid
 .container {
   margin-top: 30px;
   margin-left: 30%;
@@ -39,4 +56,4 @@ footer {
   display: block;
   float: left;
   width: 100%;
-}
+} */
