@@ -1,7 +1,20 @@
-color = "black";
+let color = "black";
+let click = false;
 
 document.addEventListener("DOMContentLoaded", function(){
   createBoard(16);
+  document.querySelector("body").addEventListener("click", function(e){
+    if(e.target.tagTame != 'BUTTON'){
+      click = !click;
+      let draw = document.querySelector("#draw");
+      if(click){
+        draw.innerHTML = 'You may draw now'
+      }
+      else{
+        draw.innerHTML = 'Click to draw again'
+      }
+    }
+  })
 
   let btnPopup = document.querySelector("#popup");
   btnPopup.addEventListener("click", function(){
@@ -45,11 +58,13 @@ function setColor(colorChoice){
 }
 
 function colorDiv(){
-  if(color == 'random'){
-    this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-  }
-  else {
-    this.style.backgroundColor = "black";
+  if(click){
+    if(color == 'random'){
+      this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    }
+    else {
+      this.style.backgroundColor = "black";
+    }
   }
 }
 
@@ -57,6 +72,7 @@ function resetBoard(){
   let divs = document.querySelectorAll('div');
   divs.forEach((div) => div.style.backgroundColor = "white");
 }
+
 // function makeBlocks() {
 //   for (var i = 0; i < 16; i++) {
 //       var row = document.createElement('div');
