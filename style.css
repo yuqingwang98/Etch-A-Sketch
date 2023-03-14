@@ -35,25 +35,3 @@ body {
   height: 500px;
   width: 500px;
 }
-/* grid
-.container {
-  margin-top: 30px;
-  margin-left: 30%;
-  width: 50%;
-}
-
-.box {
-  background: #9E9E9E;
-  border: black 1px solid;
-  cursor: pointer;
-  float: left;
-  height: 30px;
-  margin: 0 auto;
-  width: 30px;
- }
-
-.row {
-  display: block;
-  float: left;
-  width: 100%;
-} */
